@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block categoryList %}
+ {% for category in getCategories %}
+   <li>
+     <a href='/categories/{{category}}/products'>
+       {{category}}</a>
+     </li>
+ {% endfor %}
+{% endblock %}
+
+{% block content %}
+  {% if buttonIsCategory %}
+  <form method='post' action='/categories'>
+    <input class='form-category' name='category' type='text'
+    placeholder="add category"/>
+    <button class='btn-category'>Save</button>
+  </form>
+  <br>
+  {% endif %}
+
+  {% if buttonIsProduct %}
+  <form method='post' action='/categories/{{category}}/products/'>
+    <input class='form-category' name='product' type='text'
+    placeholder="add product"/>
+    <button class='btn-category'>Save</button>
+  </form>
+  <br>
+  {% endif %}
+
+{% endblock %}

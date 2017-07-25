@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block productList %}
+  {% for product in getProducts %}
+    <li class='products'>{{product.name}}</li>
+    <form class='delete-product' method="POST"
+    action="/categories//{{category}}/products/{{product.id}}?_method=DELETE">
+        <button type="submit">Delete Product</button>
+      </form><br><br>
+  {% endfor %}
+  
+  <br>
+  <form method="POST" action="/categories//{{category}}?_method=DELETE">
+      <button type="submit">Delete Category</button>
+    </form>
+
+{% endblock %}

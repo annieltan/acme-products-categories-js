@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/stylesheets/style.css" rel="stylesheet"/>
+</head>
+<body>
+  <h1 class='title'>Acme Products Categories</h1>
+  <div class="tabs">
+    <ul class='tab-links'>
+      <li class='active'>
+        <a href='/'>Home</a>
+      </li>
+        {% block categoryList %}
+        {% endblock %}
+      </ul>
+    </div>
+    <br><br>
+
+  {% block content %}
+  {% endblock %}
+
+  {% block productList %}
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+}
+.title {
+  font-size: 30px;
+}
+.tabs {
+  display:inline-block;
+  width: 100%;
+}
+.tab-links li {
+  margin:0px 5px;
+  float:left;
+  list-style:none;
+}
+form {
+  margin-left: 50px;
+}
+.products {
+  list-style: none;
+  margin-left: 50px;
+}
+.delete-product {
+  display: inline-block;
+}
